@@ -1,17 +1,17 @@
-def merge(l1,l2):
+def merge(li1,li2):
     x = []
     i = 0
     j = 0
-    len1 = len(l1)
-    len2 = len(l2)
+    len1 = len(li1)
+    len2 = len(li2)
     while i<len1 or j<len2:
-        if j>=len2 or (i<len1 and l1[i]<l2[j]):
-            x.append(l1[i])
+        if j>=len2 or (i<len1 and li1[i]<li2[j]):
+            x.append(li1[i])
             i += 1
         else:
-            x.append(l2[j])
+            x.append(li2[j])
             j += 1
-    if type(l1)==tuple:
+    if type(li1)==tuple:
         x = tuple(x)
     return x
 print(merge([1 , 2 , 7], [3]))
