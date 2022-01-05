@@ -10,11 +10,9 @@ def default_timer(func):
 
     return int_time
 
-from utils import default_timer
-
 @default_timer
 def main():
-        print('>>>>Starting time')
+        print('Starting time')
         for i in range(1000):  # 可以是任意函数  ， 这里故意模拟函数的运行时间
                 for j in range(i):
                         print(j)
